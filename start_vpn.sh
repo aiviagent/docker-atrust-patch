@@ -1,0 +1,1 @@
+docker run -d --restart always --name atrust --device /dev/net/tun --cap-add NET_ADMIN -ti -e PASSWORD=ai.trust -e URLWIN=1 -v $HOME/.atrust-data:/root -p 127.0.0.1:5901:5901 -p 127.0.0.1:1080:1080 -p 127.0.0.1:8888:8888 -p 127.0.0.1:54631:54631 --sysctl net.ipv4.conf.default.route_localnet=1 hagb/docker-atrust
